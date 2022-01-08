@@ -1,6 +1,11 @@
 # Installing Debian on your Kindle
 
-# Update (2020): This project is deprecated. I have no idea if any of the following instructions are still accurate, or if any of the links are still working. I have now moved over to [Gitlab](https://gitlab.com/kathamer).
+## Update 2022: This project live again, I updated the image creation script to use an archive repository to make it work on Kindle 3 WiFi (with Keyboard).
+
+Have fun! 
+Simon.
+
+Update (2020): This project is deprecated. I have no idea if any of the following instructions are still accurate, or if any of the links are still working. I have now moved over to [Gitlab](https://gitlab.com/kathamer).
 
 
 ## Installing Debian on your Kindle
@@ -23,7 +28,7 @@ on to your Kindle. Now you can run them. Do this by typing
 `cd ../..` and then `./RunDebian.sh --root` on your Kindle. You are now root on your Kindle!
 
 Then, hit `CTRL-D` on your Kindle until you see `[US]$` or `[US]#` 
-you are now back in your Kindle's terminal. Type `./RunBeforeDebian.sh` on your Kindle to setup mountpoints and install the `debian command/. 
+you are now back in your Kindle's terminal. Type `./RunBeforeDebian.sh` on your Kindle to setup mountpoints and install the `debian` command. 
 Now, you should be able to type `debian` in the Kindle's terminal to access Debian. 
 If you need root access (to install sudo, add users, etc) type `debian --root` to start Debian as root. 
 
