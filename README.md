@@ -22,9 +22,7 @@ Here's where it gets complicated. First, you need to generate a Debian image app
 Use `MakeImage.sh` to do this. Run the script on a Linux system to generate the image. If you do not have access to a Linux system, message me and I can provide a pre-generated one.
 
 Now, move the `debian.ext3` file on to your Kindle's root directory. You're almost there.
-Once you have moved `debian.ext3`, you need to move the `RunDebian.sh` script and the `UpdateInitScript.sh` script as well as `RunBeforeDebian.sh`
-
-on to your Kindle. Now you can run them. Do this by typing 
+Once you have moved `debian.ext3`, you need to move the `RunDebian.sh` script and the `UpdateInitScript.sh` script as well as `RunBeforeDebian.sh` on to your Kindle. Now you can run them. Do this by typing 
 `cd ../..` and then `./RunDebian.sh --root` on your Kindle. You are now root on your Kindle!
 
 Then, hit `CTRL-D` on your Kindle until you see `[US]$` or `[US]#` 
@@ -35,17 +33,17 @@ If you need root access (to install sudo, add users, etc) type `debian --root` t
 You should now have a working Debian install. 
 
 Finally, you need to setup Debian (IF YOU HAVE A PREGENERATED IMAGE YOU CAN SKIP THIS STEP)
-First, type `debian --root` to enter Debian as root.
-Then, type `cd /deboostrap`.
-Next, type `./deboostrap --second-stage` and let that do it's thing.
+1. Type `debian --root` to enter Debian as root.
+2. Type `cd /debootstrap`.
+3. Type `./debootstrap --second-stage` and let that do it's thing.
 If it fails, hit `CTRL-D` until you see `[US]$` then type `debian  --root` again.
-Once that completes, type `dpkg --configure -a`.
-Now type `adduser <USERNAME>` replacing `<USERNAME>` with your name.
-Next, type `apt-get install sudo`.
-Then, type `adduser <USERNAME> sudo` replacing `<USERNAME>` with your name and follow the prompts.
-Finally, hit `CTRL-D` until you see `[US]$` and type `debian`.
-Login with your username and password.
-Finally, type `echo alias "sudo"="sudo -S"`.
+4. Once that completes, type `dpkg --configure -a`.
+5. Now type `adduser <USERNAME>` replacing `<USERNAME>` with your name.
+6. Next, type `apt-get install sudo`.
+7. Then, type `adduser <USERNAME> sudo` replacing `<USERNAME>` with your name and follow the prompts.
+8. Finally, hit `CTRL-D` until you see `[US]$` and type `debian`.
+9. Login with your username and password.
+10. Finally, type `echo alias "sudo"="sudo -S"`.
 
 -Enjoy!
 
