@@ -2,8 +2,8 @@
 
 ## Update 2022: This project live again, I updated the image creation script to use an archive repository to make it work on Kindle 3 WiFi (with Keyboard).
 
-Have fun! 
-Simon.
+## Have fun! 
+## Simon.
 
 Update (2020): This project is deprecated. I have no idea if any of the following instructions are still accurate, or if any of the links are still working. I have now moved over to [Gitlab](https://gitlab.com/kathamer).
 
