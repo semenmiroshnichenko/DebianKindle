@@ -2,10 +2,10 @@
 echo "Debian Setup 0.0.1 by Dylan Hamer"
 echo
 echo "[*] Installing Init Script..."
-./UpdateInitScript.sh
+sh ./UpdateInitScript.sh
 echo "[*] Creating Mountpoints..."
-echo "[*] Getting Root Access..."
-su
+# echo "[*] Getting Root Access..."
+# su
 echo "[*] Creating: /mnt/debian"
 mkdir /mnt/debian
 echo "[*] Creating: /mnt/debian/dev"

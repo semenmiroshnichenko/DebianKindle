@@ -12,11 +12,11 @@ echo "[*] Making ext3 Filesystem..."
 mkfs.ext3 debian.ext3
 tune2fs -i 0 -c 0 debian.ext3
 echo "[*] Mounting Filesystem..."
-mkdir /mnt/debian
+sudo mkdir /mnt/debian
 sudo mount -o loop -t ext3 debian.ext3 /mnt/debian
 echo "[*] Installing Debian using debootstrap (THIS WILL TAKE A WHILE)..."
-sudo debootstrap --arch=armel --foreign testing /mnt/debian http://ftp.us.debian.org/
+sudo debootstrap --verbose --arch=armel --foreign wheezy /mnt/debian http://archive.debian.org/debian/
 echo "[*] Unmounting image and removing mountpoint..."
-sudo unmount /mnt/debian
-rmdir /mnt/debian
+sudo umount /mnt/debian
+sudo rmdir /mnt/debian
 echo "[*] Image generation complete, you can now copy debian.ext3 to the Kindle..."

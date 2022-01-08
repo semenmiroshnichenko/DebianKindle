@@ -6,8 +6,8 @@ echo "REDDIT EDITION - I have modified the"
 echo "script to be a bit more self contained."
 echo 
 echo "[*] Installing Debian init script..."
-echo "[*] Getting root permissions..."
-su
+# echo "[*] Getting root permissions..."
+# su
 echo "[*] Making rootfs writeable..."
 mntroot rw
 if [ -f 'RunDebian.sh' ]; then

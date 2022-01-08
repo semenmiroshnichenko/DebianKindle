@@ -11,7 +11,7 @@ else
     exit 3
 fi
 echo "[*] Mounting rootfs..."
-mount -o loop -t ext3 debian.ext3 /mnt/debian  # Mount the Debian image
+mount -o loop -t ext3 /mnt/us/debian.ext3 /mnt/debian  # Mount the Debian image
 echo "[*] Preparing Filesystem..."
 mount -o bind /dev /mnt/debian/dev  # Mount /dev
 mount -o bind /proc /mnt/debian/proc  # Mount /proc
@@ -31,3 +31,4 @@ umount /mnt/debian/dev
 umount /mnt/debian/proc
 umount /mnt/debian/sys
 umount /mnt/debian
+#losetup -d /dev/loop/1 # Remove loop device, otherwise it does not start anymore after 7 times
